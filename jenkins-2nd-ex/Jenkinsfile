@@ -29,5 +29,12 @@ pipeline{
                 '''
             }
         }
+        stage('pool-scm-checking'){
+            steps{
+                sh '''
+                echo "checking pool scm"
+                '''
+            }
+        }
     }
 }
