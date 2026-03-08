@@ -1,0 +1,17 @@
+pipline{
+    agent any
+    stages{
+        stage('git-checkout'){
+            steps{
+                git url: 'https://github.com/Amitm19/devops-masterclass.git', branch: 'main'
+            }
+        }
+        stage('build'){
+            steps{
+                sh '''
+                printenv
+                '''
+            }
+        }
+    }
+}
