@@ -13,6 +13,7 @@ pipeline{
             steps{
                 sh '''
                     printenv
+                    cd code/
                     docker build -t ${IMAGE_NAME} .
                 '''
             }
